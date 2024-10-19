@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.IO;
+using System.Reflection;
 
 namespace Lab2
 {
@@ -23,6 +24,7 @@ namespace Lab2
 
             var services = new ServiceCollection();
             services.AddDbConnection(configuration);
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             using var serviceProvider = services.BuildServiceProvider();
 

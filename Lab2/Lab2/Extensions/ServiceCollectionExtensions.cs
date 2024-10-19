@@ -11,7 +11,10 @@ namespace Lab2.Extensions
         public static IServiceCollection AddDbConnection(this IServiceCollection serviceCollection, IConfiguration configuration)
         {
             serviceCollection.AddDbContext<BikeShopDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("SqlServcerConnectionString")));
+            {
+                options.UseSqlServer(configuration.GetConnectionString("SqlServcerConnectionString"));
+                options.EnableSensitiveDataLogging();
+            });
 
             return serviceCollection;
         }

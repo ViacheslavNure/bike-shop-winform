@@ -1,9 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace Lab2.DbConnection.Entities
 {
+    [Index(nameof(Name), IsUnique = true)]
     public class BikeType
     {
+        [Required]
         public Guid Id { get; set; }
 
         [Required]
@@ -12,5 +15,17 @@ namespace Lab2.DbConnection.Entities
 
         [StringLength(500)]
         public string Description { get; set; }
+
+        public virtual ICollection<Bike> Bikes { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            if(obj is BikeType bikeType)
+            {
+                return bikeType.Name == Name && bikeType.Description == Description;
+            }
+
+            return false;
+        }
     }
 }

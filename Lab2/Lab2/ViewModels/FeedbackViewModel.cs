@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Lab2.DbConnection.Entities;
+using System.ComponentModel.DataAnnotations;
 
-namespace Lab2.DbConnection.Entities
+namespace Lab2.ViewModels
 {
-    public class Feedback
+    public class FeedbackViewModel
     {
         [Required]
         public Guid Id { get; set; }
@@ -11,11 +12,8 @@ namespace Lab2.DbConnection.Entities
         [StringLength(500)]
         public string Content { get; set; }
 
-        [Required]
         public DateTime CreationDate { get; set; }
 
         public Guid BikeId { get; set; }
-
-        public virtual Bike Bike { get; set; }
     }
 }

@@ -1,10 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Lab2.DbConnection.Entities;
+using System.ComponentModel.DataAnnotations;
 
-namespace Lab2.DbConnection.Entities
+namespace Lab2.ViewModels
 {
-    public class Bike
+    public class BikeViewModel
     {
-        [Required]
         public Guid Id { get; set; }
 
         [Required]
@@ -24,13 +24,13 @@ namespace Lab2.DbConnection.Entities
 
         public Guid BikeTypeId { get; set; }
 
-        public virtual BikeType BikeType { get; set; }
+        public virtual BikeTypeViewModel BikeType { get; set; }
 
         public virtual ICollection<Feedback> Feedbacks { get; set; }
 
         public override bool Equals(object? obj)
         {
-            if(obj is Bike bike)
+            if (obj is Bike bike)
             {
                 return bike.BrandName == BrandName
                     && bike.Model == Model
