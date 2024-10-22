@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2", "Lab2\Lab2.csproj", "{73150D00-AD68-455E-B7AF-E9110228F9D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeShop.Presentation", "BikeShop.Presentation\BikeShop.Presentation.csproj", "{73150D00-AD68-455E-B7AF-E9110228F9D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeShop.Application", "BikeShop.Application\BikeShop.Application.csproj", "{3D0415D9-B33D-4911-8957-635740E65F75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeShop.Data", "BikeShop.Data\BikeShop.Data.csproj", "{D6FB204E-FDA2-41BE-BB8C-0BEC13A78CF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{73150D00-AD68-455E-B7AF-E9110228F9D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73150D00-AD68-455E-B7AF-E9110228F9D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73150D00-AD68-455E-B7AF-E9110228F9D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D0415D9-B33D-4911-8957-635740E65F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D0415D9-B33D-4911-8957-635740E65F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D0415D9-B33D-4911-8957-635740E65F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D0415D9-B33D-4911-8957-635740E65F75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FB204E-FDA2-41BE-BB8C-0BEC13A78CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FB204E-FDA2-41BE-BB8C-0BEC13A78CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FB204E-FDA2-41BE-BB8C-0BEC13A78CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FB204E-FDA2-41BE-BB8C-0BEC13A78CF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
