@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BikeShop.Data.Context;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using System.Reflection;
 
-namespace BikeShop.Data.Context;
+namespace BikeShop.Presentation.DbContextFactory;
 
 public class BikeShopDbContextFactory : IDesignTimeDbContextFactory<BikeShopDbContext>
 {

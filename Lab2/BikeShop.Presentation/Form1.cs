@@ -82,6 +82,11 @@ namespace BikeShop.Presentation
         private void updateButton_Click(object sender, EventArgs e) =>
             ExceptionHandler.RunWithExceptionHandling((sender, e) =>
             {
+                if(selectedBikeViewModel == null)
+                {
+                    return;
+                }
+
                 var bike = new BikeViewModel
                 {
                     Id = selectedBikeViewModel.Id,
